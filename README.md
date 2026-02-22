@@ -1,8 +1,82 @@
-# Мой способ прохождения PlayIntegrity
 
-## Перед всем этим нужно выключить все спуфинги в прошивке (спуфинг гугл плей, нетфликс, снапчат, подмена для безлим гугл фото и т.д) так же нужно выключить VBMeta Fix 
+# Прохождение Play Integrity на Android 16 QPR2
 
-если коротко описывать то мой способ такой KernelSu Next spoofed + Zegisk Next + Play Integrity Fix + TEESimulator + Tricky Addon Enhanced
+### Устройство: Poco F6 | Прошивка: Project Infinity X v3.7
 
-[TEESimulator](https://h6rd.github.io/Dota2PornFxWeb/?category=other&mod=Gabe+Shopkeeper) 
-[Tricky Addon Enhanced](https://github.com/Enginex0/tricky-addon-enhanced)
+Этот метод базируется на связке **KernelSU Next** и **TEE Simulation**, что позволяет добиться прохождения всех трех проверок (MEETS_DEVICE_INTEGRITY, MEETS_BASIC_INTEGRITY и MEETS_STRONG_INTEGRITY).
+
+---
+
+## 1. Подготовка системы (Критически важно)
+
+Перед установкой модулей необходимо привести систему в "первозданный" вид, иначе встроенные в прошивку фиксы будут конфликтовать с модулями.
+
+* **Отключите все встроенные спуфинги:** Зайдите в настройки прошивки (обычно Infinity Space или Developer Options) и выключите:
+* Spoof Google Play
+* Spoof Google Photos (Безлимитные фото).
+* Spoof Netflix/Snapchat/Games.
+* И т.д если есть
+
+
+* **Ядро:** Используйте ядро с **KernelSU Next** (если нету такого ядра то патч `init_boot.img`). Версия "Next" лучше скрывает само наличие рута на новых версиях Android.
+
+---
+
+## 2. Необходимый софт и модули
+
+Установите следующие компоненты в указанном порядке:
+
+| Компонент | Назначение | Настройка |
+| --- | --- | --- |
+| **Zygisk Next** | Альтернатива обычному Zygisk | Включить: `Use anonymous memory` и `Use Zygisk Next linker`. |
+| **Play Integrity Fix** | Подмена фингерпринта | Обычно работает "из коробки". |
+| **TEE Simulator** | Эмуляция доверенной среды | Позволяет обойти аппаратную проверку. |
+| **Tricky Store / Enhanced** | Хранилище ключей | Основной инструмент для работы с Keybox. |
+
+---
+
+## 3. Тонкая настройка Tricky Addon & TEE
+
+После установки модулей и перезагрузки:
+
+1. **Выбор приложений:** В настройках Tricky Addon выберите все приложения, которые требуют проверки (Google Play, Wallet, Банковские приложения).
+2. **Конфигурация Keybox:**
+* Убедитесь, что статус Keybox — **Valid (Действительный)**.
+* Если в приложении *Key Attestation* в поле `Verified Boot Hash` отображаются нули или ошибки — активируйте опцию **Set verified boot hash**.
+* Установите актуальный **Security Patch** (соответствующий вашей прошивке или чуть более ранний).
+
+
+3. **Исключения:** Отмените выбор (Uncheck) для системных процессов, которые не влияют на оплату, чтобы избежать лишней нагрузки.
+
+---
+
+## 4. Сброс данных (Очистка хвостов)
+
+Чтобы Google Play "поверил" в новую реальность, нужно стереть старые логи детектов. Остановите и **очистите кэш и данные** (Clear Data) у следующих приложений:
+
+1. Google Play Store (Маркет).
+2. Google Wallet (Кошелек).
+3. Google Play Services (Сервисы Google — здесь важно очистить всё через "Управление местом").
+
+---
+
+## 5. Проверка результата
+
+* **Play Integrity API Checker:** Должны гореть 3 зеленые галочки (включая Strong Integrity).
+* **Google Play:** Настройки -> Сведения -> Сертификация устройства -> **"Устройство сертифицировано"**.
+
+---
+
+## Полезные ссылки
+
+* [KernelSU Next GitHub](https://github.com/rifsxd/KernelSU-Next) — Ядро с улучшенным скрытием.
+* [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) — Модуль для работы скриптов.
+* [Play Integrity Fix (Telegram)](https://t.me/keybox_xml) — Актуальные фингерпринты.
+* [Tricky Addon Enhanced](https://github.com/Enginex0/tricky-addon-enhanced) — Форк для работы с Keybox.
+* [TEE Simulator](https://www.google.com/search?q=https://github.com/h6rd/TEESimulator) — Эмуляция TEE (ссылка обновлена на GitHub автора).
+
+---
+
+> **Совет:** Если после обновления прошивки оплата отвалилась, первым делом проверяйте актуальность вашего `pif.json` в модуле Play Integrity Fix.
+
+Хотите, чтобы я помог составить список конкретных приложений, которые стоит добавить в "белый список" Tricky Store для экономии ресурсов?
