@@ -28,12 +28,13 @@
 
 | Компонент | Назначение | Настройка |
 | --- | --- | --- |
-| **Zygisk Next** | Альтернатива обычному Zygisk |  |
+| **Zygisk Next** | Альтернатива обычному Zygisk | Пункт 3 |
 | **Перезагрузка** |||
-| **Play Integrity Fix** | Подмена фингерпринта | Обычно работает "из коробки". |
+| **Play Integrity Fix** | Подмена фингерпринта | работает из коробки. |
 | **TEE Simulator** | Эмуляция доверенной среды | Пункт 3 |
-| **Tricky Store Enhanced** | Хранилище ключей | Пункт 3 |
+| **Tricky Store Enhanced** | Графический интерфейс для TEE Simulator с дополнениями | Пункт 3 |
 | **Перезагрузка** |||
+`Ссылки на зугрузку модулей ниже`
 
 ---
 ## 3. Тонкая настройка
@@ -55,7 +56,7 @@
 
 ---
 
-## 4. Сброс данных (Очистка хвостов)
+## 4. Сброс данных
 
 Чтобы Google Play "поверил" в новую реальность, нужно стереть старые логи детектов. Остановите и **очистите кэш и данные** (Clear Data) у следующих приложений:
 
@@ -74,11 +75,11 @@
 
 ## Полезные ссылки
 
-* [KernelSU Next](https://github.com/rifsxd/KernelSU-Next) — Ядро с улучшенным скрытием.
-* [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) — Модуль для работы скриптов.
-* [Play Integrity Fix (Telegram)](https://t.me/keybox_xml) — Актуальные фингерпринты.
-* [Tricky Addon Enhanced](https://github.com/Enginex0/tricky-addon-enhanced) — Форк для работы с Keybox.
-* [TEE Simulator](https://github.com/Enginex0/TEESimulator) — Эмуляция TEE.
+* [KernelSU Next](https://github.com/rifsxd/KernelSU-Next)
+* [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext)
+* [Play Integrity Fix (Telegram)](https://t.me/keybox_xml)
+* [Tricky Addon Enhanced](https://github.com/Enginex0/tricky-addon-enhanced)
+* [TEE Simulator](https://github.com/Enginex0/TEESimulator)
 
 ---
 
