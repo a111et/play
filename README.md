@@ -69,11 +69,11 @@
 
 ## Полезные ссылки
 
-* [KernelSU Next GitHub](https://github.com/rifsxd/KernelSU-Next) — Ядро с улучшенным скрытием.
+* [KernelSU Next](https://github.com/rifsxd/KernelSU-Next) — Ядро с улучшенным скрытием.
 * [Zygisk Next](https://github.com/Dr-TSNG/ZygiskNext) — Модуль для работы скриптов.
 * [Play Integrity Fix (Telegram)](https://t.me/keybox_xml) — Актуальные фингерпринты.
 * [Tricky Addon Enhanced](https://github.com/Enginex0/tricky-addon-enhanced) — Форк для работы с Keybox.
-* [TEE Simulator](https://www.google.com/search?q=https://github.com/h6rd/TEESimulator) — Эмуляция TEE (ссылка обновлена на GitHub автора).
+* [TEE Simulator](https://github.com/Enginex0/TEESimulator) — Эмуляция TEE.
 
 ---
 
