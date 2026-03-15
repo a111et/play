@@ -5,19 +5,21 @@
 --- 
 1. Я выключил весь встроенные спуфинг Spoof Google Play, Spoof Netflix/Snapchat/Games и т.д если есть 
 `Spoof Google Photos, я оставил ибо регулярно выгружаю фотографии в облако`
-2. Установил *KernelSU Next spoofed* v 3.1.0 (через `init_boot.img` из моей прошивки) 
-3. Установил Zygisk Next v1.3.2 и включил там 
+2. Установил ***KernelSU Next spoofed*** v 3.1.0 (через `init_boot.img` из моей прошивки) 
+3. Установил **Zygisk Next** v1.3.2 и включил там 
 `Use anonymous memory и Use Zygisk Next linker и Denylist Policy переключил на Disabled`
-4. Установил *Play Integrity Fix* v35 модифицированную версию от t.me/keybox_xml 
-5. Установил *TEESimulator* v3.2 от JingMatrix
-6. Установил ==Tricky Addon Enhanced== v4.8-auto от KOWX712 & Enginex0 
+4. Установил ***Play Integrity Fix*** v35 модифицированную версию от t.me/keybox_xml 
+5. Установил ***TEESimulator*** v3.2 от JingMatrix
+6. Установил ***Tricky Addon Enhanced*** v4.8-auto от KOWX712 & Enginex0 
 `Но выключил там SECURITY PATCH AUTO-UPDATE ибо как-то аномально нагревает телефон`
 
 `Есть версия и новее но у меня с ней только 2 ✅ а с этой 3 ✅`
 
 `На момент 15.03.26.
 Как я узнал теперь 3 ✅ можно получить с ещё большими танцами с бубном 😔 и для этого надо LSposed + PlayStrong каким-то токином установки другой версии google play одни трудности `
+
 ну хотя бы 2 ✅ позволяют добавить карты ы gpay и пользоваться gpay но это похоже до скоры до времени 
+
 
 > **ЭТО КАК ДОПОЛНЕНИЕ ПО ЖЕЛАНИЮ Я ПОСТАВИЛ ПУСТЬ БУДУТ**
 > 1. По желанию можно установить HMA-OSS Zygisk группе t.me/yuriiroot есть файлы ***ЭТО ПОКА ЧТО ТЕСТОВЫЕ ВЕРСИИ*** 
